@@ -24,7 +24,7 @@ export const useInventory = () => {
       prev.map(
         (product) =>
           product.id === id
-            ? { ...product, quantity: Math.max(0, product.quantity + delta) }
+            ? { ...product, quantity: Math.max(0, product.quantity + delta) } // true ให้เปลี่ยนสถานะของงานที่ตรงกับ id (ในที่นี้คืออัปเดตจำนวน)
             : product, // false ให้คืนค่าเดิมของงานที่ไม่ตรงกับ id
       ),
     );

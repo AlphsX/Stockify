@@ -15,6 +15,7 @@ const ProductList: React.FC<Props> = ({
   onDelete,
 }) => {
   // TODO: สร้างเงื่อนไข ถ้า products ไม่มีข้อมูลเลย (length === 0)
+  // ให้ return ข้อความ <p className="text-center text-gray-500">ไม่มีรายการสินค้า</p>
   if (products.length === 0) {
     return (
       <div className="bg-white rounded-3xl p-12 text-center flex flex-col items-center justify-center h-full min-h-[350px] border border-gray-100 hover:shadow-sm transition-all">
@@ -24,9 +25,7 @@ const ProductList: React.FC<Props> = ({
         <h3 className="text-2xl font-medium text-gray-900 mb-2 tracking-tight">
           No products found
         </h3>
-        <p className="text-gray-500 text-lg">
-          Try searching manually or add a new product.
-        </p>
+        <p className="text-center text-gray-500">No products found.</p>
       </div>
     );
   }

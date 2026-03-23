@@ -16,15 +16,15 @@ const AddProductForm: React.FC<Props> = ({ onSubmit }) => {
 
     // TODO: ตรวจสอบว่า name ไม่เป็นค่าว่าง (Hint: ใช้ name.trim())
     // ถ่ายทอดค่าไปยัง Props onSubmit และอย่าลืมเซ็ต name ให้กลับเป็นค่าว่าง ('')
-    if (!name.trim() || !price || !qty) return;
+    if (!name.trim() || !price || !qty) return; // ! ตรวจสอบว่า name.trim() เป็นค่าว่างหรือไม่ ถ้าเป็นค่าว่างให้ return ออกไปเลย
 
     // TODO: เพิ่มการตรวจสอบความถูกต้องของจำนวนสินค้า (ต้องเป็นจำนวนเต็มเท่านั้น)
     if (qty.includes(".")) return; // บล็อกทันทีถ้ามีจุดทศนิยม
 
     onSubmit(name.trim(), parseFloat(price), parseInt(qty, 10));
-    setName(""); // รีเซ็ตค่า Name ให้เป็นค่าว่างหลังจากส่งข้อมูลแล้ว
-    setPrice("");
-    setQty("");
+    setName(""); // รีเซ็ตค่า name ให้เป็นค่าว่างหลังจากส่งข้อมูลแล้ว
+    setPrice(""); // รีเซ็ตค่า price ให้เป็นค่าว่างหลังจากส่งข้อมูลแล้ว
+    setQty(""); // รีเซ็ตค่า qty ให้เป็นค่าว่างหลังจากส่งข้อมูลแล้ว
   };
 
   return (
@@ -44,7 +44,9 @@ const AddProductForm: React.FC<Props> = ({ onSubmit }) => {
             type="text"
             // TODO: ผูกค่า value กับ State name และดักจับ onChange เพื่ออัปเดต State
             value={name}
-            onChange={(e) => setName(e.target.value)} // ดักจับการเปลี่ยนแปลงของ input และอัปเดต State name
+            onChange={(e) => {
+              setName(e.target.value);
+            }} // ดักจับการเปลี่ยนแปลงของ input และอัปเดต State name
             className="w-full rounded-xl px-4 py-3 focus:outline-none focus:border-blue-700 bg-gray-100 transition-colors text-sm"
             placeholder="e.g. Wireless Mouse"
             required
@@ -61,7 +63,9 @@ const AddProductForm: React.FC<Props> = ({ onSubmit }) => {
               step="any"
               // TODO: ผูกค่า value กับ State price และดักจับ onChange เพื่ออัปเดต State
               value={price}
-              onChange={(e) => setPrice(e.target.value)}
+              onChange={(e) => {
+                setPrice(e.target.value);
+              }} // ดักจับการเปลี่ยนแปลงของ input และอัปเดต State price
               onBlur={() => price && setPrice(parseFloat(price).toFixed(2))}
               className="w-full rounded-xl px-4 py-3 focus:outline-none focus:border-blue-700 bg-gray-100 transition-colors text-sm"
               placeholder="0.00"
@@ -78,7 +82,9 @@ const AddProductForm: React.FC<Props> = ({ onSubmit }) => {
               step="1"
               // TODO: ผูกค่า value กับ State qty และดักจับ onChange เพื่ออัปเดต State
               value={qty}
-              onChange={(e) => setQty(e.target.value)}
+              onChange={(e) => {
+                setQty(e.target.value);
+              }} // ดักจับการเปลี่ยนแปลงของ input และอัปเดต State qty
               onKeyDown={(e) => {
                 if (
                   e.key === "." ||

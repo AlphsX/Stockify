@@ -51,7 +51,9 @@ const ProductItem: React.FC<Props> = ({
           <div className="flex flex-col gap-0.5 sm:flex-row relative z-10">
             {/* TODO: สร้าง Callback function เมื่อปุ่มลบปริมาณเปลี่ยน */}
             <button
-              onClick={() => onUpdateQuantity(product.id, -1)} // hook up กับฟังก์ชัน onUpdateQuantity
+              onClick={() => {
+                onUpdateQuantity(product.id, -1);
+              }} // hook up กับฟังก์ชัน onUpdateQuantity
               disabled={product.quantity === 0}
               className="p-1 text-gray-500 hover:text-red-600 hover:bg-white rounded-full disabled:opacity-30 disabled:hover:bg-transparent transition-colors bg-gray-100 sm:bg-transparent sm:hover:bg-gray-100"
             >
@@ -59,7 +61,9 @@ const ProductItem: React.FC<Props> = ({
             </button>
             {/* TODO: สร้าง Callback function เมื่อปุ่มเพิ่มปริมาณเปลี่ยน */}
             <button
-              onClick={() => onUpdateQuantity(product.id, 1)} // hook up กับฟังก์ชัน onUpdateQuantity
+              onClick={() => {
+                onUpdateQuantity(product.id, 1);
+              }} // hook up กับฟังก์ชัน onUpdateQuantity
               className="p-1 text-gray-500 hover:text-green-600 hover:bg-white rounded-full transition-colors bg-gray-100 sm:bg-transparent sm:hover:bg-gray-100"
             >
               <PlusCircle className="w-6 h-6" />
@@ -70,7 +74,9 @@ const ProductItem: React.FC<Props> = ({
       <td className="px-6 py-4 text-right">
         {/* TODO: เรียกใช้ฟังก์ชัน onDelete เมื่อคลิกปุ่ม */}
         <button
-          onClick={() => onDelete(product.id)} // hook up กับฟังก์ชัน onDelete ที่รับ id ของสินค้าที่ต้องการลบ
+          onClick={() => {
+            onDelete(product.id);
+          }} // hook up กับฟังก์ชัน onDelete ที่รับ id ของสินค้าที่ต้องการลบ
           className="p-2 text-gray-500 hover:text-red-600 hover:bg-white rounded-full transition-colors inline-flex relative z-10 bg-gray-100"
           title="Delete Product"
         >

@@ -7,14 +7,14 @@ interface Props {
 }
 
 const Dashboard: React.FC<Props> = ({ products }) => {
-  // TODO: คำนวณจำนวนรายการสินค้าทั้งหมด
-  const totalProducts = products.length;
+  // TODO: คำนวณจำนวนรายการสินค้าทั้งหมดที่มีอยู่ในสต๊อก
+  const totalProducts = products.length; // นับจำนวนรายการสินค้าทั้งหมด
 
-  // TODO: คำนวณมูลค่ารวมของสต๊อก (price * quantity ของทุกรายการ)
+  // TODO: คำนวณมูลค่ารวมของสต๊อกสินค้า (price * quantity ของทุกรายการ)
   // Hint: ลองใช้ Array.reduce() ในการบวกรวมข้อมูล
-  const totalValue = products.reduce((acc, p) => acc + p.price * p.quantity, 0); // รวมมูลค่าสินค้าทั้งหมด
+  const totalValue = products.reduce((acc, p) => acc + p.price * p.quantity, 0); // รวมมูลค่าสินค้าทุกชิ้นเข้าด้วยกัน
 
-  // TODO: สินค้าที่ของหมด (Out of Stock)
+  // TODO: คำนวณจำนวนสินค้าที่ของหมด (quantity === 0)
   // Hint: ลองใช้ Array.filter() ในการกรองข้อมูล
   const outOfStockCount = products.filter((p) => p.quantity === 0).length; // กรองสินค้าที่ quantity === 0 แล้วนับจำนวน
 
