@@ -15,12 +15,12 @@ const ProductItem: React.FC<Props> = ({
 }) => {
   return (
     <tr
-      className={`group transition-colors ${product.quantity === 0 ? "bg-red-50" : "hover:bg-gray-50 bg-white"}`}
+      className={`group transition-all ${product.quantity === 0 ? "bg-red-50/50 border-l-4 border-red-500" : "hover:bg-gray-50 bg-white border-l-4 border-transparent"}`}
     >
       <td className="px-6 py-4">
         <div className="flex items-center gap-3">
           {product.quantity === 0 && (
-            <AlertTriangle className="w-4 h-4 text-red-600 shrink-0" />
+            <AlertTriangle className="w-5 h-5 text-red-600 shrink-0" />
           )}
           <div>
             {/* TODO: Step 3 - สร้าง Interactive UI ด้วย Conditional Styling */}
@@ -31,8 +31,8 @@ const ProductItem: React.FC<Props> = ({
               {product.name}
             </p>
             {product.quantity === 0 && (
-              <span className="text-xs font-semibold text-red-600 uppercase tracking-wider">
-                Out of stock
+              <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-red-600 text-white uppercase tracking-widest mt-1.5 shadow-sm">
+                Out of Stock
               </span>
             )}
           </div>

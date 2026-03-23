@@ -45,7 +45,7 @@ const ProductList: React.FC<Props> = ({
               Unit Price
             </th>
             <th className="px-6 py-4 font-medium text-gray-500 text-sm uppercase tracking-wider">
-              Stock on Hand (SOH)
+              Stock on Hand
             </th>
             <th className="px-6 py-4 font-medium text-gray-500 text-sm uppercase tracking-wider text-right">
               Actions

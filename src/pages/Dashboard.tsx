@@ -74,7 +74,7 @@ const Dashboard: React.FC<Props> = ({ products }) => {
             <PackageX className="w-6 h-6" />
           </div>
           <h2 className="text-red-500 font-medium text-xs tracking-widest uppercase mb-1 z-10">
-            Out of Stock (OOS)
+            Out of Stock
           </h2>
           <p className="text-5xl leading-none font-normal text-gray-900 z-10">
             {outOfStockCount}
