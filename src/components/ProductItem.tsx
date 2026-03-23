@@ -42,12 +42,14 @@ const ProductItem: React.FC<Props> = ({
         <span className="text-gray-500">฿{product.price.toFixed(2)}</span>
       </td>
       <td className="px-6 py-4">
-        <div className="flex items-center gap-1">
-          <span
-            className={`text-lg font-medium mr-2 min-w-[2ch] ${product.quantity === 0 ? "text-red-700" : "text-gray-900"}`}
-          >
-            {product.quantity}
-          </span>
+        <div className="flex items-center gap-4">
+          <div className="w-24 shrink-0">
+            <span
+              className={`text-lg font-medium ${product.quantity === 0 ? "text-red-700" : "text-gray-900"}`}
+            >
+              {product.quantity}
+            </span>
+          </div>
           <div className="flex flex-col gap-0.5 sm:flex-row relative z-10">
             {/* TODO: สร้าง Callback function เมื่อปุ่มลบปริมาณเปลี่ยน */}
             <button
