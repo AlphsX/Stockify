@@ -24,7 +24,7 @@ const Dashboard: React.FC<Props> = ({ products }) => {
         Dashboard
       </h1>
       <p className="text-lg text-gray-500 mb-10 tracking-wide">
-        Here is the summary of your inventory.
+        Real-time visibility into your global inventory performance and stock availability.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -37,7 +37,7 @@ const Dashboard: React.FC<Props> = ({ products }) => {
             <Package className="w-6 h-6" />
           </div>
           <h2 className="text-gray-500 font-medium text-xs tracking-widest uppercase mb-1 z-10">
-            Total Unique Products
+            Total Active SKUs
           </h2>
           <p className="text-5xl leading-none font-normal text-gray-900 z-10">
             {totalProducts}
@@ -73,7 +73,7 @@ const Dashboard: React.FC<Props> = ({ products }) => {
             <PackageX className="w-6 h-6" />
           </div>
           <h2 className="text-red-500 font-medium text-xs tracking-widest uppercase mb-1 z-10">
-            Out of Stock Items
+            Out of Stock (OOS)
           </h2>
           <p className="text-5xl leading-none font-normal text-gray-900 z-10">
             {outOfStockCount}

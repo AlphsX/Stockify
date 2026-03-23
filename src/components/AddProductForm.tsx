@@ -33,7 +33,7 @@ const AddProductForm: React.FC<Props> = ({ onSubmit }) => {
         <span className="w-10 h-10 rounded-full bg-blue-50 text-blue-800 flex items-center justify-center">
           <PackagePlus className="w-5 h-5" />
         </span>
-        Add New Item
+        Create New Item
       </h2>
       <form onSubmit={handleSubmit} className="space-y-5">
         <div>
@@ -55,7 +55,7 @@ const AddProductForm: React.FC<Props> = ({ onSubmit }) => {
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-gray-500 mb-1.5 ml-1">
-              Price (฿)
+              Unit Price (฿)
             </label>
             <input
               type="number"
@@ -74,7 +74,7 @@ const AddProductForm: React.FC<Props> = ({ onSubmit }) => {
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-500 mb-1.5 ml-1">
-              Initial Qty
+              Initial Stock Level
             </label>
             <input
               type="number"
@@ -106,7 +106,7 @@ const AddProductForm: React.FC<Props> = ({ onSubmit }) => {
           className="w-full mt-4 bg-blue-700 hover:bg-blue-800 text-white font-medium py-3 rounded-full transition-colors flex items-center justify-center gap-2"
         >
           <Plus className="w-5 h-5" />
-          Add Product
+          Add to Catalog
         </button>
       </form>
     </div>

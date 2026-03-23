@@ -25,7 +25,9 @@ const ProductList: React.FC<Props> = ({
         <h3 className="text-2xl font-medium text-gray-900 mb-2 tracking-tight">
           No products found
         </h3>
-        <p className="text-center text-gray-500">No products found.</p>
+        <p className="text-center text-gray-500">
+          Your product catalog is currently empty. Get started by adding your first Item.
+        </p>
       </div>
     );
   }
@@ -36,13 +38,13 @@ const ProductList: React.FC<Props> = ({
         <thead>
           <tr className="border-b border-gray-200 bg-gray-50">
             <th className="px-6 py-4 font-medium text-gray-500 text-sm uppercase tracking-wider">
-              Product
+              Product Name
             </th>
             <th className="px-6 py-4 font-medium text-gray-500 text-sm uppercase tracking-wider hidden sm:table-cell">
-              Price
+              Unit Price
             </th>
             <th className="px-6 py-4 font-medium text-gray-500 text-sm uppercase tracking-wider">
-              Quantity
+              Stock on Hand (SOH)
             </th>
             <th className="px-6 py-4 font-medium text-gray-500 text-sm uppercase tracking-wider text-right">
               Actions

@@ -31,7 +31,7 @@ const Products: React.FC<Props> = ({
             Manage Products
           </h1>
           <p className="text-gray-500 text-lg tracking-wide">
-            Add, update, or remove inventory items.
+            Efficiently track, update, and manage your product lifecycle.
           </p>
         </div>
 
@@ -39,7 +39,7 @@ const Products: React.FC<Props> = ({
         <div className="relative w-full md:w-96">
           <input
             type="text"
-            placeholder="Search products..."
+            placeholder="Search catalog by product name..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full bg-white rounded-full py-3 pl-5 pr-14 text-sm focus:outline-none focus:border-blue-700 transition-all text-gray-900 border border-gray-100 hover:shadow-sm"
