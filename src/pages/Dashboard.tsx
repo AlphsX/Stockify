@@ -24,7 +24,8 @@ const Dashboard: React.FC<Props> = ({ products }) => {
         Dashboard
       </h1>
       <p className="text-lg text-gray-500 mb-10 tracking-wide">
-        Real-time visibility into your global inventory performance and stock availability.
+        Real-time visibility into your global inventory performance and stock
+        availability.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

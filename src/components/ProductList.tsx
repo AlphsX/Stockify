@@ -26,7 +26,8 @@ const ProductList: React.FC<Props> = ({
           No products found
         </h3>
         <p className="text-center text-gray-500">
-          Your product catalog is currently empty. Get started by adding your first Item.
+          Your product catalog is currently empty. Get started by adding your
+          first Item.
         </p>
       </div>
     );

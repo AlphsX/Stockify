@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Products from "./pages/Products";
 import Sidebar from "./components/Sidebar";
+import QuickNoteCorner from "./components/QuickNoteCorner";
 import { useInventory } from "./hooks/useInventory";
 import { useState } from "react";
 import { PanelLeft } from "lucide-react";
@@ -63,6 +64,8 @@ function App() {
             </div>
           </main>
         </div>
+
+        <QuickNoteCorner />
       </div>
     </BrowserRouter>
   );
