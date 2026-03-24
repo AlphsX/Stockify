@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import Dashboard from "./pages/Dashboard";
 import Products from "./pages/Products";
 import Sidebar from "./components/Sidebar";
@@ -66,6 +67,7 @@ function App() {
         </div>
 
         <QuickNoteCorner />
+        <Analytics />
       </div>
     </BrowserRouter>
   );
